@@ -2,7 +2,7 @@
 
 A complete, production-style cloud deployment demonstrating custom AWS VPC networking, EC2 compute provisioning, custom DNS routing, Nginx web server configuration, SSL/TLS encryption via Let's Encrypt, and external penetration testing.
 
-**Live Application:** [https://zeltechhub.shop](https://zeltechhub.shop)
+**Live Application:** [https://zeltechhub.shop](https://zeltechhub.store)
 
 ---
 
@@ -77,14 +77,14 @@ A complete, production-style cloud deployment demonstrating custom AWS VPC netwo
 ---
 
 ### Phase 3: DNS Record Configuration
-1. Registered the custom domain (`zeltechhub.shop`).
-2. Created a DNS **A Record** pointing `zeltechhub.shop` to the EC2 instance's Public IPv4 address.
+1. Registered the custom domain (`zeltechhub.store`).
+2. Created a DNS **A Record** pointing `zeltechhub.store` to the EC2 instance's Public IPv4 address.
 
 ---
 
 ### Phase 4: Web Content Preparation
 1. Downloaded a responsive web template from **ThemeWagon**.
-2. Customized the HTML/CSS assets locally for the project (`mihaltech`) and compressed the directory into a `.zip` archive.
+2. Customized the HTML/CSS assets locally for the project (`zeltech`) and compressed the directory into a `.zip` archive.
 
 ---
 
@@ -127,7 +127,7 @@ A complete, production-style cloud deployment demonstrating custom AWS VPC netwo
 
 ### Phase 7: Global DNS Propagation Verification
 1. Navigated to [DNSChecker.org](https://dnschecker.org).
-2. Queried the **A Record** for `zeltechhub.shop` to confirm global propagation matched the EC2 Public IPv4 address across international DNS resolvers.
+2. Queried the **A Record** for `zeltechhub.store` to confirm global propagation matched the EC2 Public IPv4 address across international DNS resolvers.
 
 ---
 
@@ -139,33 +139,33 @@ A complete, production-style cloud deployment demonstrating custom AWS VPC netwo
    ```
 2. Requested and installed an SSL/TLS certificate for the domain:
    ```bash
-   sudo certbot --nginx -d zeltechhub.shop
+   sudo certbot --nginx -d zeltechhub.store
    ```
 3. Restarted Nginx to apply the HTTPS configuration:
    ```bash
    sudo systemctl start nginx
    ```
 
-> **Operational Note:** Because standard EC2 public IPs change upon stopping and restarting an instance (unless an Elastic IP is attached), any instance restart requires updating the DNS **A Record** for `zeltechhub.shop` with the new Public IPv4 address.
+> **Operational Note:** Because standard EC2 public IPs change upon stopping and restarting an instance (unless an Elastic IP is attached), any instance restart requires updating the DNS **A Record** for `zeltechhub.store` with the new Public IPv4 address.
 
 ---
 
 ### Phase 10: Application Testing
-* Verified HTTP-to-HTTPS automatic redirection (`http://zeltechhub.shop` → `https://zeltechhub.shop`).
+* Verified HTTP-to-HTTPS automatic redirection (`http://zeltechhub.store` → `https://zeltechhub.store`).
 * Confirmed valid SSL certificate status in the browser padlock menu.
 * Tested responsive layouts, navigation links, and static asset loading across desktop and mobile viewports.
 
 ---
 
 ### Phase 11: External Penetration Testing & Vulnerability Scan
-1. Conducted an external security and vulnerability scan against `zeltechhub.shop` using [Pentest-Tools.com](https://pentest-tools.com).
+1. Conducted an external security and vulnerability scan against `zeltechhub.store` using [Pentest-Tools.com](https://pentest-tools.com).
 2. Audited exposed ports, TLS/SSL cipher configurations, HTTP security headers, and web server signatures to ensure no critical vulnerabilities were exposed.
 
 ---
 
 ### Phase 12 & 13: Documentation & Live Showcase
 * Documented the end-to-end architecture, CLI commands, and operational notes in this repository.
-* Published the live deployment at [https://zeltechhub.shop](https://zeltechhub.shop) for verification and portfolio review.
+* Published the live deployment at [https://zeltechhub.shop](https://zeltechhub.store) for verification and portfolio review.
 
 ---
 
